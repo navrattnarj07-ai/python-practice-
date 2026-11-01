@@ -58,3 +58,15 @@ percentage = (score / total_questions) * 100
 
 print(f"You got {score} out of {total_questions} correct!")
 print(f"Your score percentage is: {percentage:.2f}%")
+
+if percentage >= 80:
+    print("Excellent work! 🎉")
+
+elif percentage >= 60:
+    print("Good job! Keep it up! 👍")
+
+elif percentage >= 40:
+    print("Keep practising! You're improving. 😊")
+
+else:
+    print("Don't give up! Practice makes progress. 💪")
