@@ -9,22 +9,31 @@ options = (("A. Ambani ka ghar ","B. lodha building ","C. Mount everest ","D. K2
            ("A. Dharmendra pradhan ","B.  arvind kejriwal ","C. Rahul gandhi","D. Balendra shah"),
            ("A. 206 ","B. 69 ","C. 67","D. 118"),
            ("A. 118 ","B. 207 in morning ","C. 7 crore ","D. 206 "),
-           ("A. my future wife ","B. earth ","C. Sun ","D. Moon"),
+           ("A. Earth", "B. Venus", "C. Mars", "D. Jupiter"),
            ("A. mamta banerji ","B. meloni ","C. kangana ranaut ","D. sunny deol "),)
 
-answers = ("C", "D", "D", "D", "C", "B" )
-score = 0
+answers = ("C", "D", "D", "D", "B", "B")
+
 score = 0
 
 for question_num, question in enumerate(questions):
     print("-------------------------")
+    print(f"\nQuestion {question_num + 1} of {len(questions)}")
     print(question)
+
     for option in options[question_num]:
         print(option)
 
-    guess = input("Enter (A,B,C,D): ").upper()
+    while True:
+        guess = input("Enter (A,B,C,D): ").strip().upper()
+
+        if guess in ("A", "B", "C", "D"):
+            break
+        else:
+            print("Invalid!! Please enter the valid option (A, B, C or D)")
+
     if guess == answers[question_num]:
-        score+=1
+        score += 1
         print("Correct")
     else:
         print("Incorrect")
