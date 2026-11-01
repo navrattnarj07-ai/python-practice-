@@ -49,3 +49,12 @@ for guess in gueses:
     print(guess, end=" ")
 print()
 
+print("------------------------------")
+print("         FINAL RESULTS        ")
+print("------------------------------")
+
+total_questions = len(questions)
+percentage = (score / total_questions) * 100
+
+print(f"You got {score} out of {total_questions} correct!")
+print(f"Your score percentage is: {percentage:.2f}%")
